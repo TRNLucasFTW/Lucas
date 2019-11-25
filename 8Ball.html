@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>8 Ball</title>
+        <style>
+            body {
+                background-color:black;
+                padding:0;
+                margin:0;
+            }
+            .container {
+                width:425px;
+                position:relative;
+                margin:20vh auto;
+            }
+            h1 {
+                text-align:center;
+                color: white;
+            }
+            p {
+                font-size:16px;
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Ask me anything</h1>
+            <textarea style="resize : none;" placeholder="..."></textarea>
+            <button onclick="answerMe()">Ask me!</button>
+            <p id="answerContainer"></p>
+        </div>
+    </body>
+        <script>
+                var answers = ["UNO REVERSE CARD!", "I dont know", "Ask yourself", "Google it", "The answer is 42!", "no comment", "you know it, just think harder","How about no?"];
+                function answerMe() {
+                    var random = answers[Math.floor(Math.random() * answers.length)];
+                    document.getElementById("answerContainer").innerHTML = random;
+                };
+        </script>
+</html>
